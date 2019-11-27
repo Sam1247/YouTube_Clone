@@ -12,6 +12,7 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
     UIWindowScene *windowScene = (UIWindowScene *)scene;
     self.window = UIWindow.new;
     [self.window setFrame:windowScene.coordinateSpace.bounds];
@@ -20,6 +21,17 @@
     UINavigationController *navcon = [[UINavigationController alloc] initWithRootViewController:[[HomeController alloc] initWithCollectionViewLayout:layout]];
     [self.window setRootViewController:navcon];
     [self.window makeKeyAndVisible];
+    //
+    UIView *statusBarBackgroundView = UIView.new;
+    [statusBarBackgroundView setBackgroundColor:[UIColor colorWithRed:194.0/255.0 green:31.0/255.0 blue:31.0/255.0 alpha:1]];
+    [self.window addSubview:statusBarBackgroundView];
+    [statusBarBackgroundView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    [[statusBarBackgroundView.topAnchor constraintEqualToAnchor:self.window.topAnchor] setActive:YES];
+    [[statusBarBackgroundView.leftAnchor constraintEqualToAnchor:self.window.leftAnchor] setActive:YES];
+    [[statusBarBackgroundView.rightAnchor constraintEqualToAnchor:self.window.rightAnchor] setActive:YES];
+    [[statusBarBackgroundView.heightAnchor constraintEqualToConstant:20] setActive:YES];
+    
 }
 
 

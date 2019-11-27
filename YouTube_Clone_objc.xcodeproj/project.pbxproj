@@ -14,6 +14,9 @@
 		209AB646238E5F4C00276E0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 209AB644238E5F4C00276E0E /* LaunchScreen.storyboard */; };
 		209AB649238E5F4C00276E0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 209AB648238E5F4C00276E0E /* main.m */; };
 		20E7B3A4238E676700AC1269 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E7B3A3238E676700AC1269 /* VideoCell.m */; };
+		20E7B3A7238EA4A400AC1269 /* MenuBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E7B3A6238EA4A400AC1269 /* MenuBar.m */; };
+		20E7B3B0238EB19E00AC1269 /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E7B3AF238EB19E00AC1269 /* BaseCell.m */; };
+		20E7B3B3238EB22700AC1269 /* MenuBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E7B3B2238EB22700AC1269 /* MenuBarCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,13 @@
 		209AB648238E5F4C00276E0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		20E7B3A2238E676700AC1269 /* VideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
 		20E7B3A3238E676700AC1269 /* VideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
+		20E7B3A5238EA4A400AC1269 /* MenuBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuBar.h; sourceTree = "<group>"; };
+		20E7B3A6238EA4A400AC1269 /* MenuBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuBar.m; sourceTree = "<group>"; };
+		20E7B3AA238EA58300AC1269 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		20E7B3AE238EB19E00AC1269 /* BaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCell.h; sourceTree = "<group>"; };
+		20E7B3AF238EB19E00AC1269 /* BaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCell.m; sourceTree = "<group>"; };
+		20E7B3B1238EB22700AC1269 /* MenuBarCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuBarCell.h; sourceTree = "<group>"; };
+		20E7B3B2238EB22700AC1269 /* MenuBarCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuBarCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,9 @@
 				209AB644238E5F4C00276E0E /* LaunchScreen.storyboard */,
 				209AB648238E5F4C00276E0E /* main.m */,
 				209AB647238E5F4C00276E0E /* Info.plist */,
+				20E7B3AA238EA58300AC1269 /* Constants.h */,
+				20E7B3AE238EB19E00AC1269 /* BaseCell.h */,
+				20E7B3AF238EB19E00AC1269 /* BaseCell.m */,
 			);
 			path = YouTube_Clone_objc;
 			sourceTree = "<group>";
@@ -79,6 +92,10 @@
 				209AB63D238E5F4B00276E0E /* HomeController.m */,
 				20E7B3A2238E676700AC1269 /* VideoCell.h */,
 				20E7B3A3238E676700AC1269 /* VideoCell.m */,
+				20E7B3A5238EA4A400AC1269 /* MenuBar.h */,
+				20E7B3A6238EA4A400AC1269 /* MenuBar.m */,
+				20E7B3B1238EB22700AC1269 /* MenuBarCell.h */,
+				20E7B3B2238EB22700AC1269 /* MenuBarCell.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -165,8 +182,11 @@
 			files = (
 				209AB63E238E5F4B00276E0E /* HomeController.m in Sources */,
 				20E7B3A4238E676700AC1269 /* VideoCell.m in Sources */,
+				20E7B3B3238EB22700AC1269 /* MenuBarCell.m in Sources */,
 				209AB638238E5F4B00276E0E /* AppDelegate.m in Sources */,
 				209AB649238E5F4C00276E0E /* main.m in Sources */,
+				20E7B3B0238EB19E00AC1269 /* BaseCell.m in Sources */,
+				20E7B3A7238EA4A400AC1269 /* MenuBar.m in Sources */,
 				209AB63B238E5F4B00276E0E /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

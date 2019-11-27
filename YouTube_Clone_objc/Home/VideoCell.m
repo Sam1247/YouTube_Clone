@@ -10,42 +10,43 @@
 
 @implementation VideoCell
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self setupViews];
-    }
-    return self;
-}
-
 - (void)setupViews
 {
     // initializing views
     UIImageView *thumbnailImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    [thumbnailImageView setImage:[UIImage imageNamed:@"thumbnail"]];
+    [thumbnailImageView setContentMode:UIViewContentModeScaleAspectFill];
+    [thumbnailImageView setClipsToBounds:YES];
     [thumbnailImageView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.contentView addSubview:thumbnailImageView];
     [thumbnailImageView setBackgroundColor:UIColor.blueColor];
     
     UIImageView *userProfileImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    [userProfileImageView setImage:[UIImage imageNamed:@"bigGigLogo"]];
+    [userProfileImageView.layer setCornerRadius:22];
+    [userProfileImageView.layer setMasksToBounds:YES];
     [userProfileImageView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.contentView addSubview:userProfileImageView];
     [userProfileImageView setBackgroundColor:UIColor.greenColor];
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    [titleLabel setText:@"Big Gigantic - The Little Things"];
     [titleLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.contentView addSubview:titleLabel];
-    [titleLabel setBackgroundColor:UIColor.purpleColor];
+    //[titleLabel setBackgroundColor:UIColor.purpleColor];
     
     UITextView *subtitleTextView = [[UITextView alloc] initWithFrame:CGRectZero];
+    [subtitleTextView setText:@"1,746,738 views•Mar 2, 2016"];
+    [subtitleTextView setTextContainerInset:UIEdgeInsetsMake(0, -4, 0, 0)];
     [subtitleTextView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.contentView addSubview:subtitleTextView];
-    [subtitleTextView setBackgroundColor:UIColor.redColor];
+    [subtitleTextView setTextColor:UIColor.lightGrayColor];
+    //[subtitleTextView setBackgroundColor:UIColor.redColor];
     
     UIView *separatorLine = [[UIView alloc] initWithFrame:CGRectZero];
     [separatorLine setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.contentView addSubview:separatorLine];
-    [separatorLine setBackgroundColor:UIColor.blackColor];
+    [separatorLine setBackgroundColor:[UIColor colorWithRed:230/255 green:230/255 blue:230/255 alpha:.1]];
     
     // setup constraints
     
@@ -66,8 +67,8 @@
     
     [[subtitleTextView.leftAnchor constraintEqualToAnchor:titleLabel.leftAnchor] setActive:YES];
     [[subtitleTextView.rightAnchor constraintEqualToAnchor:titleLabel.rightAnchor] setActive:YES];
-    [[subtitleTextView.bottomAnchor constraintEqualToAnchor:userProfileImageView.bottomAnchor] setActive:YES];
-    [[subtitleTextView.heightAnchor constraintEqualToConstant:20] setActive:YES];
+    [[subtitleTextView.bottomAnchor constraintEqualToAnchor:separatorLine.topAnchor] setActive:YES];
+    [[subtitleTextView.heightAnchor constraintEqualToConstant:35] setActive:YES];
     
     [[separatorLine.bottomAnchor constraintEqualToAnchor:self.bottomAnchor] setActive:YES];
     [[separatorLine.leftAnchor constraintEqualToAnchor:self.leftAnchor] setActive:YES];

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Constants.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [UINavigationBar.appearance setBarTintColor:RED_YOUTUBE];
+    // get rid of shadow underneath nav bar
+    [UINavigationBar.appearance setShadowImage:UIImage.new];
+    //[UINavigationBar.appearance setBackgroundImage:UIImage.new forBarMetrics:UIBarMetricsDefault];
+    
     return YES;
 }
 

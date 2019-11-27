@@ -1,5 +1,5 @@
 //
-//  VideoCell.h
+//  BaseCell.h
 //  YouTube_Clone_objc
 //
 //  Created by Abdalla Elsaman on 11/27/19.
@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VideoCell : BaseCell
+@interface BaseCell : UICollectionViewCell
+
+- (void)setupViews;
 
 @end
 
