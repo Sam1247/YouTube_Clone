@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		206E97FA238F148600209964 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 206E97F9238F148600209964 /* Channel.m */; };
 		209AB638238E5F4B00276E0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 209AB637238E5F4B00276E0E /* AppDelegate.m */; };
 		209AB63B238E5F4B00276E0E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 209AB63A238E5F4B00276E0E /* SceneDelegate.m */; };
 		209AB63E238E5F4B00276E0E /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209AB63D238E5F4B00276E0E /* HomeController.m */; };
@@ -17,9 +18,13 @@
 		20E7B3A7238EA4A400AC1269 /* MenuBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E7B3A6238EA4A400AC1269 /* MenuBar.m */; };
 		20E7B3B0238EB19E00AC1269 /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E7B3AF238EB19E00AC1269 /* BaseCell.m */; };
 		20E7B3B3238EB22700AC1269 /* MenuBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E7B3B2238EB22700AC1269 /* MenuBarCell.m */; };
+		20EB9C81238EF9B600A87371 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EB9C80238EF9B600A87371 /* Video.m */; };
+		20EB9C84238F122C00A87371 /* UIImageView+UIImageView_loadImageWithUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EB9C83238F122C00A87371 /* UIImageView+UIImageView_loadImageWithUrl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		206E97F8238F148600209964 /* Channel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
+		206E97F9238F148600209964 /* Channel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
 		209AB633238E5F4B00276E0E /* YouTube_Clone_objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTube_Clone_objc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		209AB636238E5F4B00276E0E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		209AB637238E5F4B00276E0E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,6 +45,10 @@
 		20E7B3AF238EB19E00AC1269 /* BaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCell.m; sourceTree = "<group>"; };
 		20E7B3B1238EB22700AC1269 /* MenuBarCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuBarCell.h; sourceTree = "<group>"; };
 		20E7B3B2238EB22700AC1269 /* MenuBarCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuBarCell.m; sourceTree = "<group>"; };
+		20EB9C7F238EF9B600A87371 /* Video.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		20EB9C80238EF9B600A87371 /* Video.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		20EB9C82238F122C00A87371 /* UIImageView+UIImageView_loadImageWithUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIImageView_loadImageWithUrl.h"; sourceTree = "<group>"; };
+		20EB9C83238F122C00A87371 /* UIImageView+UIImageView_loadImageWithUrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIImageView_loadImageWithUrl.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +81,8 @@
 		209AB635238E5F4B00276E0E /* YouTube_Clone_objc */ = {
 			isa = PBXGroup;
 			children = (
+				20EB9C85238F123100A87371 /* Utilities */,
+				20EB9C7E238EF84600A87371 /* Model */,
 				209AB650238E671800276E0E /* Supporting Files */,
 				209AB64F238E66F500276E0E /* Home */,
 				209AB642238E5F4C00276E0E /* Assets.xcassets */,
@@ -109,6 +120,26 @@
 				209AB63A238E5F4B00276E0E /* SceneDelegate.m */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20EB9C7E238EF84600A87371 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20EB9C7F238EF9B600A87371 /* Video.h */,
+				20EB9C80238EF9B600A87371 /* Video.m */,
+				206E97F8238F148600209964 /* Channel.h */,
+				206E97F9238F148600209964 /* Channel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		20EB9C85238F123100A87371 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				20EB9C82238F122C00A87371 /* UIImageView+UIImageView_loadImageWithUrl.h */,
+				20EB9C83238F122C00A87371 /* UIImageView+UIImageView_loadImageWithUrl.m */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,7 +213,10 @@
 			files = (
 				209AB63E238E5F4B00276E0E /* HomeController.m in Sources */,
 				20E7B3A4238E676700AC1269 /* VideoCell.m in Sources */,
+				206E97FA238F148600209964 /* Channel.m in Sources */,
 				20E7B3B3238EB22700AC1269 /* MenuBarCell.m in Sources */,
+				20EB9C84238F122C00A87371 /* UIImageView+UIImageView_loadImageWithUrl.m in Sources */,
+				20EB9C81238EF9B600A87371 /* Video.m in Sources */,
 				209AB638238E5F4B00276E0E /* AppDelegate.m in Sources */,
 				209AB649238E5F4C00276E0E /* main.m in Sources */,
 				20E7B3B0238EB19E00AC1269 /* BaseCell.m in Sources */,

@@ -1,20 +1,19 @@
 //
-//  VideoCell.h
+//  Channel.h
 //  YouTube_Clone_objc
 //
 //  Created by Abdalla Elsaman on 11/27/19.
 //  Copyright © 2019 Dumbies. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "BaseCell.h"
-#import "Video.h"
+#import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VideoCell : BaseCell
+@interface Channel : NSObject
 
-@property (strong, nonatomic) Video *video;
+@property (strong, nonatomic) NSString *profileImageUrl;
+@property (strong, nonatomic) NSString *name;
 
 @end
 

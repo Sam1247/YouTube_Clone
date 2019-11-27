@@ -16,6 +16,7 @@
 
 @implementation HomeController {
     NSString *cellId;
+    NSMutableArray *videos;
 }
 
 - (void)viewDidLoad {
@@ -32,7 +33,62 @@
     [self.collectionView setContentInset:UIEdgeInsetsMake(50, 0, 0, 0)];
     [self.collectionView setVerticalScrollIndicatorInsets:UIEdgeInsetsMake(50, 0, 0, 0)];
     [self setupMenuBar];
+    [self setupNavBarButtons];
+    [self fetchVideos];
 }
+
+- (void)fetchVideos
+{
+    videos = NSMutableArray.new;
+    NSURL *url = [NSURL URLWithString:@"https://s3-us-west-2.amazonaws.com/youtubeassets/home.json"];
+    [[NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"%@", error);
+        }
+        NSError *errorSer;
+        NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&errorSer];
+        if (jsonArray) {
+            for (NSDictionary *item in jsonArray) {
+                Video *video = Video.new;
+                Channel *channel = Channel.new;
+                video.title = (NSString *)item[@"title"];
+                video.thumbnailImageUrl = (NSString *)item[@"thumbnail_image_name"];
+                NSDictionary *channelDic = item[@"channel"];
+                channel.name = channelDic[@"name"];
+                channel.profileImageUrl = channelDic[@"profile_image_name"];
+                video.channel = channel;
+                [self->videos addObject:video];
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+               [self.collectionView reloadData];
+            });
+        } else {
+            NSLog(@"Error parsing JSON: %@", errorSer);
+        }
+    }] resume];
+}
+
+- (void)setupNavBarButtons
+{
+    UIImage *searchImage = [[UIImage imageNamed:@"search_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *searchBarButtonItem = [[UIBarButtonItem alloc] initWithImage:searchImage style:UIBarButtonItemStylePlain target:self action:@selector(handleSearch)];
+    
+    UIImage *moreImage = [[UIImage imageNamed:@"nav_more_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *moreBarButtonItem = [[UIBarButtonItem alloc] initWithImage:moreImage style:UIBarButtonItemStylePlain target:self action:@selector(handleMore)];
+    
+    [self.navigationItem setRightBarButtonItems:@[moreBarButtonItem, searchBarButtonItem]];
+}
+
+- (void)handleSearch
+{
+    NSLog(@"sSC");
+}
+
+- (void)handleMore
+{
+    NSLog(@"sSC");
+}
+
 
 - (void)setupMenuBar
 {
@@ -53,12 +109,13 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 5;
+    return videos.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
+    VideoCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
+    cell.video = (Video *)[videos objectAtIndex:indexPath.item];
     return cell;
 }
 
