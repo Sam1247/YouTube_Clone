@@ -1,5 +1,5 @@
 #import "SceneDelegate.h"
-#import "ViewController.h"
+#import "HomeController.h"
 
 @interface SceneDelegate ()
 
@@ -16,7 +16,9 @@
     self.window = UIWindow.new;
     [self.window setFrame:windowScene.coordinateSpace.bounds];
     self.window.windowScene = windowScene;
-    [self.window setRootViewController:ViewController.new];
+    UICollectionViewLayout *layout = UICollectionViewFlowLayout.new;
+    UINavigationController *navcon = [[UINavigationController alloc] initWithRootViewController:[[HomeController alloc] initWithCollectionViewLayout:layout]];
+    [self.window setRootViewController:navcon];
     [self.window makeKeyAndVisible];
 }
 
