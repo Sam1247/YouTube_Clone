@@ -7,11 +7,11 @@
 //
 
 #import "VideoCell.h"
-#import "UIImageView+UIImageView_loadImageWithUrl.h"
+#import "CustomImageView.h"
 
 @implementation VideoCell {
-    UIImageView *thumbnailImageView;
-    UIImageView *userProfileImageView;
+    CustomImageView *thumbnailImageView;
+    CustomImageView *userProfileImageView;
     UILabel *titleLabel;
     UITextView *subtitleTextView;
     UIView *separatorLine;
@@ -39,7 +39,7 @@
 - (void)setupViews
 {
     // initializing views
-    thumbnailImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    thumbnailImageView = [[CustomImageView alloc] initWithFrame:CGRectZero];
     [thumbnailImageView setImage:[UIImage imageNamed:@"thumbnail"]];
     [thumbnailImageView setContentMode:UIViewContentModeScaleAspectFill];
     [thumbnailImageView setClipsToBounds:YES];
@@ -47,7 +47,7 @@
     [self.contentView addSubview:thumbnailImageView];
     [thumbnailImageView setBackgroundColor:UIColor.blueColor];
     
-    userProfileImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    userProfileImageView = [[CustomImageView alloc] initWithFrame:CGRectZero];
     [userProfileImageView setImage:[UIImage imageNamed:@"bigGigLogo"]];
     [userProfileImageView.layer setCornerRadius:22];
     [userProfileImageView setContentMode:UIViewContentModeScaleAspectFill];

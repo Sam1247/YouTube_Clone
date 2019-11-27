@@ -22,7 +22,6 @@
     // get rid of shadow underneath nav bar
     [UINavigationBar.appearance setShadowImage:UIImage.new];
     //[UINavigationBar.appearance setBackgroundImage:UIImage.new forBarMetrics:UIBarMetricsDefault];
-    
     return YES;
 }
 

@@ -1,17 +1,16 @@
 //
-//  UIImageView+UIImageView_loadImageWithUrl.h
+//  CustomImageView.h
 //  YouTube_Clone_objc
 //
-//  Created by Abdalla Elsaman on 11/27/19.
+//  Created by Abdalla Elsaman on 11/28/19.
 //  Copyright © 2019 Dumbies. All rights reserved.
 //
-
 
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIImageView (UIImageView_loadImageWithUrl)
+@interface CustomImageView : UIImageView
 
 - (void)loadImageWithUr:(NSString *)urlString;
 
