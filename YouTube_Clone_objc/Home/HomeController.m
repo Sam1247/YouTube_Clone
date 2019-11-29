@@ -9,6 +9,7 @@
 #import "HomeController.h"
 #import "VideoCell.h"
 #import "MenuBar.h"
+#import "SettingsLauncher.h"
 
 @interface HomeController ()
 
@@ -17,9 +18,11 @@
 @implementation HomeController {
     NSString *cellId;
     NSMutableArray *videos;
+    SettingsLauncher *settingsLauncher;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     [self.collectionView setBackgroundColor:UIColor.whiteColor];
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width - 32, self.view.frame.size.height)];
@@ -32,6 +35,7 @@
     [self.collectionView registerClass:VideoCell.class forCellWithReuseIdentifier:cellId];
     [self.collectionView setContentInset:UIEdgeInsetsMake(50, 0, 0, 0)];
     [self.collectionView setVerticalScrollIndicatorInsets:UIEdgeInsetsMake(50, 0, 0, 0)];
+    settingsLauncher = SettingsLauncher.new;
     [self setupMenuBar];
     [self setupNavBarButtons];
     [self fetchVideos];
@@ -86,7 +90,7 @@
 
 - (void)handleMore
 {
-    NSLog(@"sSC");
+    [settingsLauncher showSettings];
 }
 
 
@@ -129,6 +133,5 @@
 {
     return 0;
 }
-
 
 @end

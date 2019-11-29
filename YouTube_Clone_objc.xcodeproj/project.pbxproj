@@ -16,6 +16,9 @@
 		209AB643238E5F4C00276E0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 209AB642238E5F4C00276E0E /* Assets.xcassets */; };
 		209AB646238E5F4C00276E0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 209AB644238E5F4C00276E0E /* LaunchScreen.storyboard */; };
 		209AB649238E5F4C00276E0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 209AB648238E5F4C00276E0E /* main.m */; };
+		20A27C582390023E000E61E3 /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A27C572390023E000E61E3 /* Setting.m */; };
+		20D99A82238FC7520005AC68 /* SettingsLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D99A81238FC7520005AC68 /* SettingsLauncher.m */; };
+		20D99A85238FEDCE0005AC68 /* SettingsLauncherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D99A84238FEDCE0005AC68 /* SettingsLauncherCell.m */; };
 		20E7B3A4238E676700AC1269 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E7B3A3238E676700AC1269 /* VideoCell.m */; };
 		20E7B3A7238EA4A400AC1269 /* MenuBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E7B3A6238EA4A400AC1269 /* MenuBar.m */; };
 		20E7B3B0238EB19E00AC1269 /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E7B3AF238EB19E00AC1269 /* BaseCell.m */; };
@@ -41,6 +44,12 @@
 		209AB645238E5F4C00276E0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		209AB647238E5F4C00276E0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		209AB648238E5F4C00276E0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		20A27C562390023E000E61E3 /* Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
+		20A27C572390023E000E61E3 /* Setting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
+		20D99A80238FC7520005AC68 /* SettingsLauncher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsLauncher.h; sourceTree = "<group>"; };
+		20D99A81238FC7520005AC68 /* SettingsLauncher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsLauncher.m; sourceTree = "<group>"; };
+		20D99A83238FEDCE0005AC68 /* SettingsLauncherCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsLauncherCell.h; sourceTree = "<group>"; };
+		20D99A84238FEDCE0005AC68 /* SettingsLauncherCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsLauncherCell.m; sourceTree = "<group>"; };
 		20E7B3A2238E676700AC1269 /* VideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
 		20E7B3A3238E676700AC1269 /* VideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
 		20E7B3A5238EA4A400AC1269 /* MenuBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuBar.h; sourceTree = "<group>"; };
@@ -110,6 +119,10 @@
 				20E7B3A6238EA4A400AC1269 /* MenuBar.m */,
 				20E7B3B1238EB22700AC1269 /* MenuBarCell.h */,
 				20E7B3B2238EB22700AC1269 /* MenuBarCell.m */,
+				20D99A80238FC7520005AC68 /* SettingsLauncher.h */,
+				20D99A81238FC7520005AC68 /* SettingsLauncher.m */,
+				20D99A83238FEDCE0005AC68 /* SettingsLauncherCell.h */,
+				20D99A84238FEDCE0005AC68 /* SettingsLauncherCell.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -132,6 +145,8 @@
 				20EB9C80238EF9B600A87371 /* Video.m */,
 				206E97F8238F148600209964 /* Channel.h */,
 				206E97F9238F148600209964 /* Channel.m */,
+				20A27C562390023E000E61E3 /* Setting.h */,
+				20A27C572390023E000E61E3 /* Setting.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,8 +233,11 @@
 			files = (
 				209AB63E238E5F4B00276E0E /* HomeController.m in Sources */,
 				20E7B3A4238E676700AC1269 /* VideoCell.m in Sources */,
+				20A27C582390023E000E61E3 /* Setting.m in Sources */,
 				206E97FA238F148600209964 /* Channel.m in Sources */,
 				206E9803238F36F900209964 /* Cache.m in Sources */,
+				20D99A82238FC7520005AC68 /* SettingsLauncher.m in Sources */,
+				20D99A85238FEDCE0005AC68 /* SettingsLauncherCell.m in Sources */,
 				20E7B3B3238EB22700AC1269 /* MenuBarCell.m in Sources */,
 				20EB9C81238EF9B600A87371 /* Video.m in Sources */,
 				206E9800238F356C00209964 /* CustomImageView.m in Sources */,
